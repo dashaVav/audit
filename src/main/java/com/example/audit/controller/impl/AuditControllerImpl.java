@@ -4,7 +4,7 @@ import com.example.audit.controller.AuditController;
 import com.example.audit.dto.AuditAction;
 import com.example.audit.dto.ServiceDTO;
 import com.example.audit.dto.Type;
-import com.example.audit.service.AuditService;
+import com.example.audit.service.impl.AuditServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class AuditControllerImpl implements AuditController {
-    private final AuditService auditService;
+    private final AuditServiceImpl auditService;
 
     @Override
     public ResponseEntity<AuditAction> getAudit(UUID uuid) {

@@ -1,4 +1,4 @@
-package com.example.audit.kafka;
+package com.example.audit.service.kafka;
 
 import com.example.audit.dto.AuditAction;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
