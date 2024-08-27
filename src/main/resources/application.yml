@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: audit
+  kafka:
+    bootstrap-servers: localhost:29091
+    trusted-packages: "*"
+    topic:
+      audit: audit
+    group-id:
+      audit: audit
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+server:
+  port: 8097
