@@ -1,7 +1,5 @@
 package com.example.audit.dto;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +16,8 @@ import java.util.UUID;
 public class AuditAction implements Serializable {
     private UUID id;
     @Indexed
-    private String type;
+    private Type type;
     @Indexed
-    @JsonSerialize(using = ToStringSerializer.class)
     private ServiceDTO service;
     private String message;
 }
