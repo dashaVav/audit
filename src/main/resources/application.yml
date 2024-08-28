@@ -10,7 +10,7 @@ spring:
       audit: audit
   data:
     redis:
-      host: redis
+      host: redis-db
       port: 6379
 
 server:
