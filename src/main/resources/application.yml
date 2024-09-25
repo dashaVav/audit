@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: audit
+  kafka:
+    bootstrap-servers: kafka:9091
+    trusted-packages: "*"
+    topic:
+      audit: audit
+    group-id:
+      audit: audit
+  data:
+    redis:
+      host: redis-db
+      port: 6379
+
+server:
+  port: 8097
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
